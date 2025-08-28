@@ -1,0 +1,156 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a1128, #1d1e61);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.logo {
+    width: 140px;
+    height: 135px;
+    object-fit: contain;
+}  
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #ff4757;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h1 span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+h1 span:hover::after {
+    transform: scaleX(1);
+}
+
+.main-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#text-input {
+    width: 100%;
+    min-height: 200px;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.1rem;
+    resize: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#text-input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.3);
+}
+
+#text-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+#voice-select {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgb(15, 15, 15);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#voice-select:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.3);
+}
+
+#listen-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff4757;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#listen-btn:hover {
+    background-color: #e63c4b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+}
+
+#listen-btn:active {
+    transform: translateY(0);
+}
+
+/* SVG Animation */
+#listen-btn svg {
+    transition: transform 0.3s ease;
+}
+
+#listen-btn:hover svg {
+    transform: scale(1.1);
+}

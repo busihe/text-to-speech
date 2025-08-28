@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/images/logo.png" alt="Audiolate Logo" class="logo">
+            <h1>Text To Speech <span>Converter</span></h1>
+        </div>
+        
+        <div class="main-container">
+            <textarea 
+                id="text-input" 
+                placeholder="Write anything here..."
+                rows="10"
+                cols="50"></textarea>
+            
+            <div class="controls">
+                <select id="voice-select">
+                    <option value="">Google US English</option>
+                </select>
+                
+                <button id="listen-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" fill="white"/>
+                    </svg>
+                    Listen
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
